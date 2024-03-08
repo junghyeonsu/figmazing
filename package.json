@@ -6,5 +6,5 @@
     "@biomejs/biome": "^1.5.3"
   },
   "license": "MIT",
-  "workspaces": ["examples/*"]
+  "workspaces": ["examples/*", "packages/*"]
 }
