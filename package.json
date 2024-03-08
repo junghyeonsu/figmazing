@@ -1,36 +1,10 @@
 {
-  "name": "figmazing",
+  "name": "@figmazing/monorepo",
   "version": "1.0.0",
-  "dependencies": {
-    "@create-figma-plugin/ui": "^3.0.2",
-    "@create-figma-plugin/utilities": "^3.0.2",
-    "@trpc/client": "^10.43.1",
-    "@trpc/server": "^10.43.1",
-    "preact": ">=10",
-    "zod": "^3.22.4"
-  },
+  "private": true,
   "devDependencies": {
-    "@biomejs/biome": "^1.3.3",
-    "@create-figma-plugin/build": "^3.0.2",
-    "@create-figma-plugin/tsconfig": "^3.0.2",
-    "@figma/plugin-typings": "1.79.0",
-    "@types/node": "^20.8.10",
-    "typescript": ">=4"
+    "@biomejs/biome": "^1.5.3"
   },
-  "scripts": {
-    "build": "build-figma-plugin --typecheck --minify",
-    "watch": "build-figma-plugin --typecheck --watch"
-  },
-  "figma-plugin": {
-    "editorType": ["figma"],
-    "id": "figma-plugin-trpc-test",
-    "name": "TRPC TEST",
-    "main": "src/api/main.ts",
-    "ui": "src/ui/index.tsx",
-    "networkAccess": {
-      "reasoning": "We need to access the API",
-      "allowedDomains": ["*"],
-      "devAllowedDomains": ["localhost:3000"]
-    }
-  }
+  "license": "MIT",
+  "workspaces": ["examples/*"]
 }

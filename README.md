@@ -1,3 +1,3 @@
 # figmazing
 
-Figma Plugin Framework with type safety with `create-figma-plugin`.
+Useful tools for working with Figma Plugin.

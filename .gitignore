@@ -1,6 +1,6 @@
 .DS_Store
 *.log
 *.css.d.ts
-/build/
-/manifest.json
+build
+manifest.json
 node_modules/
