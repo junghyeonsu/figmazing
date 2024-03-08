@@ -12,7 +12,7 @@ export const Resizable = () => {
       w: Math.max(50, Math.floor(e.clientX + 5)),
       h: Math.max(50, Math.floor(e.clientY + 5)),
     };
-    emit<ResizeWindowHandler>("RESIZE_WINDOW", size.w, size.h);
+    emit<ResizeWindowHandler>("FIGMAZING:RESIZE_WINDOW", size.w, size.h);
   }
 
   function handlePointerDown(e: React.PointerEvent<SVGSVGElement>) {
@@ -37,7 +37,6 @@ export const Resizable = () => {
       onPointerDown={handlePointerDown}
       onPointerMove={handlePointerMove}
       onPointerUp={handlePointerUp}
-      className="fixed right-[2px] bottom-[2px] cursor-nwse-resize z-50"
       width="16"
       height="16"
       viewBox="0 0 16 16"

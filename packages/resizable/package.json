@@ -1,16 +1,46 @@
 {
   "name": "@figmazing/resizable",
-  "version": "0.0.1",
+  "version": "0.0.0-development.5",
   "license": "MIT",
+  "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./main": {
+      "types": "./dist/main.d.ts",
+      "require": "./dist/main.js",
+      "import": "./dist/main.mjs"
+    }
+  },
+  "files": ["dist", "src"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/junghyeonsu/figmazing.git",
+    "directory": "packages/resizable"
+  },
+  "scripts": {
+    "build": "yarn build:js && yarn build:dts",
+    "build:js": "node build.js",
+    "build:dts": "tsc --emitDeclarationOnly"
+  },
+  "dependencies": {
+    "@create-figma-plugin/utilities": "^3.1.0",
+    "@figma/plugin-typings": "^1.88.0"
+  },
   "devDependencies": {
+    "@types/node": "^20.11.25",
     "@types/react": "^18.2.64",
+    "esbuild": "^0.20.1",
     "react": "^18.2.0",
     "typescript": "^5.4.2"
   },
   "peerDependencies": {
     "react": "^18.0.0 || ^17.0.0 || ^16.0.0"
   },
-  "dependencies": {
-    "@create-figma-plugin/utilities": "^3.1.0"
+  "publishConfig": {
+    "access": "public"
   }
 }
