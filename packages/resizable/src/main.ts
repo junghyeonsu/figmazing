@@ -1,6 +1,6 @@
 import { EventHandler, on } from "@create-figma-plugin/utilities";
 
-const WINDOW_SIZE_KEY = "figmazing:windowSize";
+const WINDOW_SIZE_KEY = "FIGMAZING:windowSize";
 
 export interface ResizeWindowHandler extends EventHandler {
   name: "FIGMAZING:RESIZE_WINDOW";

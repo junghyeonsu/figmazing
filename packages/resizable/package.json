@@ -1,6 +1,6 @@
 {
   "name": "@figmazing/resizable",
-  "version": "0.0.0-development.5",
+  "version": "0.0.1",
   "license": "MIT",
   "main": "dist/index.js",
   "exports": {
@@ -27,11 +27,11 @@
     "build:dts": "tsc --emitDeclarationOnly"
   },
   "dependencies": {
-    "@create-figma-plugin/utilities": "^3.1.0",
-    "@figma/plugin-typings": "^1.88.0"
+    "@create-figma-plugin/utilities": "^3.1.0"
   },
   "devDependencies": {
     "@types/node": "^20.11.25",
+    "@figma/plugin-typings": "^1.88.0",
     "@types/react": "^18.2.64",
     "esbuild": "^0.20.1",
     "react": "^18.2.0",
