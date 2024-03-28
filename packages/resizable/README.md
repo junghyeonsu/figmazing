@@ -17,7 +17,17 @@ import { Resizable } from "@figmazing/resizable";
 // create a resizable component
 
 const App = () => {
-  return <Resizable />;
+  return (
+    <Resizable
+      style={{
+        position: "fixed",
+        bottom: "2px",
+        right: "2px",
+        width: "16px",
+        height: "16px",
+      }}
+    />
+  );
 };
 ```
 

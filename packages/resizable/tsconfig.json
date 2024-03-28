@@ -2,14 +2,13 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "isolatedModules": true,
+    "skipLibCheck": true,
     "jsx": "react",
     "target": "es2016",
     "lib": ["es2016", "dom"],
     "moduleResolution": "Node",
     "strict": true,
     "declaration": true,
-
     "outDir": "dist",
-    "types": ["@types/node"]
   },
 }
