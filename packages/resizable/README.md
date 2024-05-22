@@ -32,14 +32,16 @@ const App = () => {
 ```
 
 ```ts
-// main
-import "@figmazing/resizable/main";
-
-// If you want restore last size
-import { restoreWindowSize } from "@figmazing/resizable/main";
+// main.ts
+import { restoreWindowSize, onResizeWindow } from "@figmazing/resizable/main";
 
 function app() {
-  // restore last size
+  // !! Necessary
+  // listen to window resize event
+  onResizeWindow();
+
+  // ?? Optional
+  // restore last size when the plugin is opened
   restoreWindowSize();
 }
 ```
