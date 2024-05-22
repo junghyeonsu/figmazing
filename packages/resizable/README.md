@@ -34,4 +34,12 @@ const App = () => {
 ```ts
 // main
 import "@figmazing/resizable/main";
+
+// If you want restore last size
+import { restoreWindowSize } from "@figmazing/resizable/main";
+
+function app() {
+  // restore last size
+  restoreWindowSize();
+}
 ```
