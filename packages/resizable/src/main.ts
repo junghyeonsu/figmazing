@@ -7,7 +7,7 @@ export interface ResizeWindowHandler extends EventHandler {
   handler: (width: number, height: number) => void;
 }
 
-const onResizeWindow = () =>
+export const onResizeWindow = () =>
   on<ResizeWindowHandler>("FIGMAZING:RESIZE_WINDOW", (w, h) => {
     figma.ui.resize(w, h);
     figma.clientStorage.setAsync(FIGMAZING_WINDOW_SIZE_KEY, { w, h });
@@ -17,5 +17,3 @@ export const restoreWindowSize = async () => {
   const { w, h } = (await figma.clientStorage.getAsync(FIGMAZING_WINDOW_SIZE_KEY)) as { w: number; h: number };
   figma.ui.resize(w, h);
 };
-
-onResizeWindow();
