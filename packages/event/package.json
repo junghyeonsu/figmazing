@@ -1,6 +1,6 @@
 {
   "name": "@figmazing/event",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Type-safe event system for communication between main and UI contexts in Figma plugins",
   "source": "src/index.ts",
   "main": "dist/index.js",
