@@ -22,15 +22,21 @@
     "watch": "build-figma-plugin --typecheck --watch"
   },
   "figma-plugin": {
-    "editorType": ["figma"],
+    "editorType": [
+      "figma"
+    ],
     "id": "state-share-figma-plugin",
     "name": "State Share Figma Plugin",
     "main": "src/api/main.ts",
     "ui": "src/ui/App.tsx",
     "networkAccess": {
       "reasoning": "We need to access the API",
-      "allowedDomains": ["*"],
-      "devAllowedDomains": ["localhost:3000"]
+      "allowedDomains": [
+        "*"
+      ],
+      "devAllowedDomains": [
+        "localhost:3000"
+      ]
     }
   }
 }

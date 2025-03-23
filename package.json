@@ -6,5 +6,9 @@
     "@biomejs/biome": "^1.5.3"
   },
   "license": "MIT",
-  "workspaces": ["examples/*", "packages/*"]
+  "workspaces": [
+    "examples/*",
+    "packages/*"
+  ],
+  "packageManager": "yarn@4.7.0"
 }
