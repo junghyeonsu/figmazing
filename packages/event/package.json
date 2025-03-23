@@ -1,0 +1,53 @@
+{
+  "name": "@figmazing/event",
+  "version": "0.0.0",
+  "description": "Type-safe event system for communication between main and UI contexts in Figma plugins",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "bunchee",
+    "dev": "bunchee --watch",
+    "clean": "rimraf dist",
+    "prepublishOnly": "yarn clean && yarn build"
+  },
+  "keywords": [
+    "figma",
+    "figma-plugin",
+    "events",
+    "messaging",
+    "ipc",
+    "typescript"
+  ],
+  "author": "Figmazing",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/figmazing/figmazing.git"
+  },
+  "bugs": {
+    "url": "https://github.com/figmazing/figmazing/issues"
+  },
+  "homepage": "https://github.com/figmazing/figmazing#readme",
+  "peerDependencies": {
+    "typescript": ">=4.5.0"
+  },
+  "devDependencies": {
+    "@figma/plugin-typings": "^1.76.0",
+    "bunchee": "^6.5.0",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.1.6"
+  }
+}
