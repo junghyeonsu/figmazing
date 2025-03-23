@@ -7,16 +7,16 @@ on:
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
-permissions:
-  contents: write
-  packages: read
-  pull-requests: write
-
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   release:
+    permissions:
+      contents: write
+      packages: read
+      pull-requests: write
+
     name: Release
     runs-on: ubuntu-latest
     steps:
