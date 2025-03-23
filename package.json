@@ -10,7 +10,8 @@
     "dev:packages": "ultra -r --filter \"packages/*\" dev",
     "clean": "ultra -r clean",
     "clean:packages": "ultra -r --filter \"packages/*\" clean",
-    "release": "yarn build && changeset publish",
+    "release": "yarn build && yarn changeset publish",
+    "version": "yarn changeset version && yarn install --no-immutable",
     "list": "ultra --list -r",
     "info": "ultra --info"
   },
