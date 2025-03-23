@@ -2,22 +2,25 @@
   "name": "@figmazing/event",
   "version": "0.0.0",
   "description": "Type-safe event system for communication between main and UI contexts in Figma plugins",
-  "type": "module",
-  "main": "esm/index.js",
-  "types": "esm/index.d.ts",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./esm/index.d.ts",
-      "import": "./esm/index.js"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
     }
   },
   "files": [
-    "esm",
+    "dist",
     "src"
   ],
   "scripts": {
-    "build": "tsc --project tsconfig.json",
-    "clean": "rimraf esm",
+    "build": "bunchee",
+    "dev": "bunchee --watch",
+    "clean": "rimraf dist",
     "prepublishOnly": "yarn clean && yarn build"
   },
   "keywords": [
@@ -43,6 +46,7 @@
   },
   "devDependencies": {
     "@figma/plugin-typings": "^1.76.0",
+    "bunchee": "^6.5.0",
     "rimraf": "^5.0.5",
     "typescript": "^5.1.6"
   }

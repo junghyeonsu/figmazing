@@ -2,14 +2,32 @@
   "name": "@figmazing/monorepo",
   "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "build": "ultra -r --topology build",
+    "build:packages": "ultra -r --filter \"packages/*\" build",
+    "build:examples": "ultra -r --filter \"examples/*\" build",
+    "dev": "ultra -r dev",
+    "dev:packages": "ultra -r --filter \"packages/*\" dev",
+    "clean": "ultra -r clean",
+    "clean:packages": "ultra -r --filter \"packages/*\" clean",
+    "release": "yarn build && changeset publish",
+    "list": "ultra --list -r",
+    "info": "ultra --info"
+  },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "@changesets/cli": "^2.28.1"
+    "@changesets/cli": "^2.28.1",
+    "bunchee": "^4.4.8",
+    "typescript": "^5.4.2",
+    "ultra-runner": "^3.10.5"
   },
   "license": "MIT",
   "workspaces": [
     "examples/*",
     "packages/*"
   ],
-  "packageManager": "yarn@4.7.0"
+  "packageManager": "yarn@4.7.0",
+  "ultra": {
+    "concurrent": true
+  }
 }

@@ -1,18 +1,18 @@
 {
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"],
   "compilerOptions": {
     "target": "es2018",
     "module": "esnext",
-    "moduleResolution": "node",
+    "lib": ["dom", "esnext"],
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
-    "outDir": "./esm",
-    "rootDir": "./src",
+    "importHelpers": false,
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
     "strictFunctionTypes": true,
-    "strictBindCallApply": true,
     "strictPropertyInitialization": true,
     "noImplicitThis": true,
     "alwaysStrict": true,
@@ -20,10 +20,9 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true
-  },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "esm"]
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  }
 }
