@@ -24,12 +24,6 @@ jobs:
           node-version: 20
           cache: yarn
 
-      - name: Setup Yarn
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: yarn
-
       - name: Install Dependencies
         run: yarn install
 
